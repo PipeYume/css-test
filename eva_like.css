@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Matisse-EB';
+    src: url('https://cdn.jsdelivr.net/gh/PipeYume/css-test@1.0/EVA-Matisse_Standard.subset.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 容器样式 */
+section.eva_like {
+    font-family: 'Matisse-EB', sans-serif; /* 使用加载的字体 */
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.scrolling-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+/* 滚动文字样式 */
+.scrolling-text-wrapper {
+    display: flex;
+    animation: scroll-left 15s linear infinite;
+}
+
+.scrolling-text {
+    letter-spacing: -0.3px;
+    white-space: nowrap;
+    padding-right: 50px; /* 添加一些空间以防止字母之间太紧凑 */
+}
+
+/* 滚动动画 */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* "芙莉莲、袭来" 样式 */
+.vertical-horizontal-container {
+    display: flex;
+    align-items: flex-start; /* 确保竖排的文字从顶部开始 */
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl; /* 竖排书写 */
+    margin-right: 10px; /* 控制竖排字间距 */
+    font-size: 48px; /* 字体大小可以调整 */
+}
+
+.horizontal-text {
+    font-size: 48px; /* 横排文字大小 */
+    display: inline-block;
+    margin-top: 82px; /* 调整使其向下移动一行 */
+    vertical-align: top; /* 使横排文字与竖排文字的“莲”字对齐 */
+}
+
+.horizontal-text span {
+    margin-right: -30px; /* 缩小“、”和“袭来”之间的间距 */
+    margin-left: -20px;
+}
+
